@@ -17,4 +17,5 @@ data <- data.frame(
 
 setDT(data)
 
+setorder(data, qrt, month)
 data[, row_n := .I, by = .(qrt, month)]
